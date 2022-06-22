@@ -8,6 +8,9 @@
 	<!-- Main css -->
 	<link rel="stylesheet" type="text/css" href="../main.css">
 
+	<!-- Estilo formulario -->
+	<link rel="stylesheet" type="text/css" href="form.css">
+
 </head>
 <body>
 
@@ -32,6 +35,23 @@
 </header>
 
 <section>
+
+	<div id="formulario">
+
+		<form method="post" action="cadastro.php">
+			<label for="nome">Nome do participante:</label>
+			<input id="nome" type="text" name="nome_participante">
+
+			<br><br>
+			<!--
+			<label for="tipo">Tipo de atividade</label>
+			<input id="tipo" type="text" name="tipo_atividade">
+
+			<br><br>
+			-->
+			<input id="btn" type="submit" value="Enviar" name="btn_confir">
+		</form>
+	</div>
 
 </section>
 
