@@ -1,0 +1,20 @@
+#formulario {
+	display: block;
+	text-align: center;
+}
+
+form {
+	display: inline-block;
+	padding: 50px 0;
+}
+
+form input {
+	padding: 3px 6px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+}
+
+form #btn {
+	padding: 6px 12px;
+	text-transform: uppercase;
+}
