@@ -6,10 +6,10 @@
 	<title>V Secitec</title>
 
 	<!-- Main css -->
-	<link rel="stylesheet" type="text/css" href="../main.css">
+	<link rel="stylesheet" type="text/css" href="../style/main.css">
 
 	<!-- Estilo formulario -->
-	<link rel="stylesheet" type="text/css" href="form.css">
+	<link rel="stylesheet" type="text/css" href="../style/form.css">
 
 </head>
 <body>
@@ -38,18 +38,18 @@
 
 	<div id="formulario">
 
-		<form method="post" action="../pages-php/cadastro.php">
+		<form method="post" action="cadastro.php">
 			<label for="nome">Nome da atividade:</label>
 			<input id="nome" type="text" name="nome_atividade">
+            
+            <br>
+            
+            <label for="nome">Tipo da atividade:</label>
+			<input id="nome" type="text" name="Tipo_atividade">
 
 			<br><br>
-
-			<label for="tipo">Tipo de atividade:</label>
-			<input id="tipo" type="text" name="tipo_atividade">
-
-			<br><br>
-
-			<input id="btn" type="submit" value="Cadastrar Atividade" name="btn_confir">
+			
+			<input id="btn" type="submit" value="Enviar" name="btn_confir">
 		</form>
 	</div>
 
