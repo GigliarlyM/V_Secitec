@@ -1,4 +1,13 @@
 <?php
+
+/*
+	Existe um erro nessa parte do projeto.
+	O erro se concentra na hora de carregar a página html
+	hipótese: a ordem de presendência dos comandos está com mal funcionamento
+	Ou pode ser que tirando um include funcione.
+*/
+
+
 include "conexao.php";
 
 include "../pages/atividades.html";

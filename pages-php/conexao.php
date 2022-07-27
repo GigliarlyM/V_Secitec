@@ -1,5 +1,7 @@
 <?php
 
+// não tem erros na hora de fazer a conexão
+
 $hostname = "localhost";
 $banco_de_dados = "secitec";
 $usuario = "teste";
