@@ -25,10 +25,10 @@
 			<a href="../index.html">home</a>
 		</li>
 		<li>
-			<a href="../pages-php/participante.php">Participantes</a>
+			<a href="#" id="ativo">Participantes</a>
 		</li>
 		<li>
-			<a href="#" id="ativo">Atvidades</a>
+			<a href="../pages-php/atividades.php">Atvidades</a>
 		</li>
 	</ul>
 
@@ -39,13 +39,8 @@
 	<div id="formulario">
 
 		<form method="post" action="">
-			<label for="nome">Nome da atividade:</label>
-			<input id="nome" type="text" name="nome_atividade">
-            
-            <br><br>
-            
-            <label for="nome">Tipo da atividade:</label>
-			<input id="nome" type="text" name="Tipo_atividade">
+			<label for="nome">Nome do participante:</label>
+			<input id="nome" type="text" name="nome_participante">
 
 			<br><br>
 			
