@@ -3,9 +3,9 @@
 // não tem erros na hora de fazer a conexão
 
 $hostname = "localhost";
-$banco_de_dados = "secitec";
-$usuario = "teste";
-$senha = "teste";
+$banco_de_dados = "secbase";
+$usuario = "Adonias";
+$senha = "";
 
 $mysqli= new mysqli($hostname, $usuario, $senha, $banco_de_dados);
 
