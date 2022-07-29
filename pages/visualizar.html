@@ -25,13 +25,13 @@
 			<a href="../index.html">home</a>
 		</li>
 		<li>
-			<a href="#" id="ativo">Participantes</a>
+			<a href="../pages-php/participante.php">Participantes</a>
 		</li>
 		<li>
 			<a href="../pages-php/atividades.php">Atvidades</a>
 		</li>
-		<li>
-			<a href="../pages-php/visualizar.php">Visualizar</a>
+        <li>
+			<a href="#" id="ativo">Visualizar</a>
 		</li>
 		<li>
 			<a href="../pages-php/delete.php">Deletar</a>
@@ -45,20 +45,14 @@
 	<div id="formulario">
 
 		<form method="post" action="">
-			<label for="nome">Nome do participante:</label>
-			<input id="nome" type="text" name="nome_participante">
-		
-			</br></br>
-
-			<label for="email">Email do participante:</label>
-			<input id="email" type="email" name="email_participante">
-		
-			</br></br>
-
-			<label for="area">Área de atuação do participante:</label>
-			<input id="area" type="text" name="area_participante">
-
-			</br></br>
+        
+            <input id="atividades" name="escolha" type="radio" value="atividades">
+            <label for="atividades">Atividades</label>
+            <br><br>
+			
+            <input id="participante" name="escolha" type="radio" value="participante">
+            <label for="participante">Participante</label>
+            <br><br>
 			
 			<input id="btn" type="submit" value="Enviar" name="btn_confir">
 		</form>
@@ -66,5 +60,3 @@
 
 </section>
 
-</body>
-</html>
