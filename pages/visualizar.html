@@ -29,10 +29,10 @@
 			<a href="../pages-php/participante.php">Participantes</a>
 		</li>
 		<li>
-			<a href="#" id="ativo">Atvidades</a>
+			<a href="../pages-php/atividades.php">Atvidades</a>
 		</li>
-		<li>
-			<a href="../pages-php/visualizar.php">Visualizar</a>
+        <li>
+			<a href="#" id="ativo">Visualizar</a>
 		</li>
 		<li>
 			<a href="../pages-php/delete.php">Deletar</a>
@@ -47,20 +47,18 @@
 
 		<form method="post" action="">
 			<div class="formtitle">
-				<label for="nome">Nome da atividade:</label>
-				<label for="tipo">Tipo da atividade:</label>
+				<label for="atividades">Atividades</label>
+				<label for="participante">Participante</label>
 			</div>
 			
 			<div class="forminputs">
-				<input id="nome" type="text" name="nome_atividade">
-				<input id="tipo" type="text" name="tipo_atividade">
+				<input id="atividades" name="escolha" type="radio" value="atividades">
+				<input id="participante" name="escolha" type="radio" value="participante">
 			</div>
-            
+			
 			<input id="btn" type="submit" value="Enviar" name="btn_confir">
 		</form>
 	</div>
 
 </section>
 
-</body>
-</html>

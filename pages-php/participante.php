@@ -1,47 +1,47 @@
 <?php
 
+include "conexao.php";
+
+if (isset($_POST["tipo_form"])) {
+	echo "enviou";
+	$nome = $_POST['nome_part'];
+	$email = $_POST['email_part'];
+	$telefone = $_POST['telefone_part'];
+	$data = $_POST['datanasc_part'];
+	$usuario = $_POST['usuario_part'];
+	$senha = password_hash($_POST['senha_part'], PASSWORD_DEFAULT);
+
+	try {
+		
+		$bd->beginTransaction();
+		
+		$insertParticipante = "INSERT INTO participante (nome,email,telefone,dataNasc)
+    	VALUES (?,?,?,?)";
+    	$statement = $bd->prepare($insertParticipante);
+	
+    	$statement->execute(array($nome, $email, $telefone, $data));
+	
+    	$participante_id = $bd->lastInsertId();
+	
+    	$insertUsuario = "INSERT INTO usuarios (nome,senha)
+    	VALUES (?,?,?)";
+    	$statement = $bd->prepare($insertUsuario);
+	
+    	$statement->execute(array($usuario,$senha));
+	
+    	$bd->commit();
+
+    	$bd = null;
+
+    	//include 'sessao.php';
+    	//criarSessao($usuario_participante);
+
+	}catch(PDOException $e){
+		echo $e->getMessage();
+	}
+
+}
+
 include "../pages/participante.html";
-
-if(!isset($_SESSION)) {
-	session_start();
-}
-
-function tratarDados() {
-
-	echo "<script> console.log('iniciou a função') </script>";
-	
-	include "conexao.php";
-
-	foreach ($_POST as $key => $value){
-		$_SESSION[$key] = $mysqli->real_escape_string($value);
-	}
-	
-	if(isset($_POST)){
-		$sql_code = "INSERT INTO participantes (
-			nome_p,
-			email_p,
-			area_p)
-			VALUES(
-			'$_SESSION[nome_participante]',
-			'$_SESSION[email_participante]',
-			'$_SESSION[area_participante]'
-			)";
-	
-		$confirmar = $mysqli->query($sql_code) or die($mysqli->error);
-	
-		if($confirmar){
-			unset($_SESSION['nome_participante'], $_SESSION['email_participante'], $_SESSION['area_participante']);
-	
-			//echo "<script> location.href='atividades.php'; </script>";
-	
-		}
-	}
-	echo "<script> console.log('terminou a função') </script>";
-}
-
-if (isset($_POST['nome_participante']) and isset($_POST['email_participante']) and isset($_POST['area_participante'])){
-	tratarDados();
-}
-
 
 ?>

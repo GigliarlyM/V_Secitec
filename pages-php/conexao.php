@@ -3,14 +3,16 @@
 // não tem erros na hora de fazer a conexão
 
 $hostname = "localhost";
-$banco_de_dados = "secbase";
-$usuario = "Adonias";
-$senha = "";
+$dbname = "secitec";
+$usuario = "teste";
+$senha = "teste";
 
-$mysqli= new mysqli($hostname, $usuario, $senha, $banco_de_dados);
+try {
+	$bd= new PDO("mysql:host=$hostname; dbname=$dbname; charset=utf8mb4", $usuario, $senha);
 
-if ($mysqli->connect_errno){
-	echo "Erro na conexão ao servidor: (" . $mysqli->connect_errno . ")" . $mysqli->connecterror;
+} catch (PDOException $e) {
+	echo $e->getMessage();
 }
 
 ?>
+

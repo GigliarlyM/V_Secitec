@@ -14,6 +14,7 @@
 
 </head>
 <body>
+
 <header>
 
 	<div id="logo">
@@ -25,16 +26,16 @@
 			<a href="../index.html">home</a>
 		</li>
 		<li>
-			<a href="#" id="ativo">Participantes</a>
+			<a href="../pages-php/participante.php">Participantes</a>
 		</li>
 		<li>
 			<a href="../pages-php/atividades.php">Atvidades</a>
 		</li>
-		<li>
+        <li>
 			<a href="../pages-php/visualizar.php">Visualizar</a>
 		</li>
-		<li>
-			<a href="../pages-php/delete.php">Deletar</a>
+        <li>
+			<a href="#" id="ativo">Deletar</a>
 		</li>
 	</ul>
 
@@ -45,17 +46,17 @@
 	<div id="formulario">
 
 		<form method="post" action="">
+			<div class="formtitle">
+				<label for="tipo">Atividade ou Participante:</label>
+				<label for="nome">Nome:</label>
+			</div>
 			
-			<input type="hidden" name="tipo_form" value="participante">
-			<input id="nome_completo" type="text" name="nome_part" placeholder="Nome Completo">
-			<input id="email_part" type="email" name="email_part" placeholder="E-mail">
-			<input id="telefone_part" type="text" name="telefone_part" placeholder="Telefone">
-			<input id="datanasc_part" type="text" name="datanasc_part" placeholder="Data de Nascimento" onfocus="(this.type='date')">
-			<hr>
-			<input id="usuario_part" type="text" name="usuario_part" placeholder="Nome de usuário">
-			<input id="senha_part" type="password" name="senha_part" placeholder="Senha">
-				
-		<input id="btn" type="submit" value="Enviar" name="btn_confir">
+			<div class="forminputs">
+				<input id="tipo" type="text" name="tipo_delete">
+				<input id="nome" type="text" name="nome_delete">
+			</div>
+			
+			<input id="btn" type="submit" value="Enviar" name="btn_confir">
 		</form>
 	</div>
 
